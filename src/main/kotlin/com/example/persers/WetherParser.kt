@@ -1,4 +1,4 @@
-package com.example.parsers;
+package com.example.parsers
 
 import com.example.models.CityWeatherData
 import org.json.JSONObject
