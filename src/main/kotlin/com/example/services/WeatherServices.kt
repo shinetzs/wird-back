@@ -9,12 +9,12 @@ import kotlinx.serialization.json.Json
 import com.example.parsers.WeatherResponseParser
 import com.example.utils.RetryOperationUtil
 import com.example.models.CityList
+import com.example.util.EnvLoader
 import kotlin.random.Random
 
 class WeatherServices {
 
-    //***deberia ir en un archivo aparte ignorado por git***
-    private val apiKey = "0wimoMYLc5QurVKpdUQWrIAqPPF3rnuY"
+    private val apiKey:String = EnvLoader.get("TOMORROW_API_KEY") { it }
     private val cities = CityList.cities
 
     suspend fun fetchWeatherData(): List<CityWeatherData> {
@@ -66,10 +66,12 @@ class WeatherServices {
                 return WeatherResponseParser.parseWeatherResponse(city, response)
             } else {
                 println("Error: $responseCode for city $city")
+                saveWeatherApiErrorToRedis(city, "$responseCode in weather API")
                 return null
             }
         } catch (e: Exception) {
             println("Error making HTTP request: ${e.message}")
+            saveWeatherApiErrorToRedis(city, "making http request ${e.message}")
             return null
         }
     }
