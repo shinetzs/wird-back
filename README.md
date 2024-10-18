@@ -1,20 +1,20 @@
-Wird-Backend
+WIRD-BACKEND
 
-Descripción
+DESCRIPCIÓN
 
 Este proyecto es un servicio para la consulta y almacenamiento en caché de datos meteorológicos de varias ciudades. 
 Utiliza una API meteorológica externa (Tomorrow.io) para obtener los datos de clima y un caché basado en Redis.
 
-Requisitos previos
+REQUISITOS PREVIOS
 
 Kotlin (versión x.x.x)
-Ktor (versión x.x.x)
+(versión x.x.x)
 JDK 8+
 Redis account
 Tomorrow.io account
 
 
-Instalación y ejecución
+INSTALACIÓN Y EJECUCIÓN
 
 Clona este repositorio
 Configura las variables de entorno:
