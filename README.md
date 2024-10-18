@@ -7,11 +7,11 @@ Utiliza una API meteorológica externa (Tomorrow.io) para obtener los datos de c
 
 REQUISITOS PREVIOS
 
-Kotlin (versión x.x.x)
-(versión x.x.x)
-JDK 8+
-Redis account
-Tomorrow.io account
+-  Kotlin (versión x.x.x)
+-  (versión x.x.x)
+-  JDK 8+
+-  Redis account
+-  Tomorrow.io account
 
 
 INSTALACIÓN Y EJECUCIÓN
