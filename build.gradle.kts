@@ -16,11 +16,11 @@ application {
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
+
 tasks.withType<Jar> {
     manifest {
-        attributes["Main-Class"] = "com.example.ApplicationKt"  // Asegúrate que la clase esté correcta
+        attributes["Main-Class"] = "com.example.ApplicationKt"
     }
-    from(configurations.runtimeClasspath.get().map { if (it.isDirectory) it else zipTree(it) })
 }
 
 repositories {
