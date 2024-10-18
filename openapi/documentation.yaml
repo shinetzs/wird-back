@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Weather API
+  version: 1.0.0
+  description: API para obtener información del clima
+
+paths:
+  /weather/{city}:
+    get:
+      summary: Obtener información del clima
+      description: Devuelve la información del clima para la ciudad especificada.
+      parameters:
+        - name: city
+          in: path
+          required: true
+          description: El nombre de la ciudad para la que se quiere obtener el clima.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Información del clima devuelta con éxito.
+        '400':
+          description: Solicitud incorrecta. Falta el parámetro de ciudad.
+        '404':
+          description: Ciudad no encontrada.
