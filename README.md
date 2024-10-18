@@ -16,15 +16,15 @@ Tomorrow.io account
 
 INSTALACIÓN Y EJECUCIÓN
 
-Clona este repositorio
-Configura las variables de entorno:
- - Crear archivo .env en carpeta src
- - Definir variables:
+- Clona este repositorio
+- Configura las variables de entorno:
+  - Crear archivo .env en carpeta src
+  - Definir variables:
       REDIS_HOST=your_redis_host
       REDIS_PORT=your_redis_port
       REDIS_PASSWORD=your_redis_password
       TOMORROW_API_KEY=tomorrow_api_key
-  - Realizar build del proyecto:
-      ./gradlew build
-  - Correr proyecto
-      ./gradlew run
+- Realizar build del proyecto:
+   ./gradlew build
+- Correr proyecto
+   ./gradlew run
