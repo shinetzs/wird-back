@@ -13,7 +13,7 @@ object RedisClient {
 
     fun getClient(): Jedis {
         if (!::jedis.isInitialized) {
-            init()  // Inicializa si no ha sido inicializado
+            init()
         }
         return jedis
     }

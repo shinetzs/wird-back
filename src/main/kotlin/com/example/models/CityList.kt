@@ -6,10 +6,10 @@ data class City(val name: String, val code: String)
 object CityList {
     val cities = listOf(
         City("Santiago", "CL"),
-//        City("Zurich", "CH"),
-//        City("Auckland", "NZ"),
-//        City("Sydney", "AU"),
-//        City("London", "UK"),
-//        City("Georgia", "US")
+        City("Zurich", "CH"),
+        City("Auckland", "NZ"),
+        City("Sydney", "AU"),
+        City("London", "UK"),
+        City("Georgia", "US")
     )
 }

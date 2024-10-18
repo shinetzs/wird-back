@@ -3,6 +3,7 @@ package com.example.utils
 import kotlinx.coroutines.delay
 
 //función genérica para reintentar la ejecución de una función X cantidad de veces
+//ademas se agrega el posible fallo del 20%
 object RetryOperationUtil {
     suspend fun <T> retryOperation(maxRetries: Int, delayMillis: Long = 1000L, function: suspend () -> T?): T? {
         var attempts = 0

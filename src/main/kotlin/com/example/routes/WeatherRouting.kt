@@ -1,15 +1,15 @@
 import io.ktor.http.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import com.example.services.WetherServices
+import com.example.services.WeatherServices
 
-fun Route.wetherRouting() {
-    val wetherServices = WetherServices()
+fun Route.weatherRouting() {
+    val weatherServices = WeatherServices()
 
-    route("/wether") {
+    route("/weather") {
         get("/{city}") {
             val city = call.parameters["city"] ?: return@get call.respondText("City not provided", status = HttpStatusCode.BadRequest)
-            val weatherData = wetherServices.getWeatherByCity(city)
+            val weatherData = weatherServices.getWeatherByCity(city)
 
             if (weatherData != null) {
                 call.respond(weatherData)
