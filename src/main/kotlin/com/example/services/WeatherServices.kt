@@ -9,12 +9,13 @@ import kotlinx.serialization.json.Json
 import com.example.parsers.WeatherResponseParser
 import com.example.utils.RetryOperationUtil
 import com.example.models.CityList
+import com.example.util.EnvLoader
 import redis.clients.jedis.exceptions.JedisConnectionException
 import kotlin.random.Random
 
 class WeatherServices {
 
-    private val apiKey: String = System.getenv("TOMORROW_API_KEY") ?: throw IllegalArgumentException("TOMORROW_API_KEY is missing")
+    private val apiKey:String = EnvLoader.get("TOMORROW_API_KEY") { it }
     private val cities = CityList.cities
 
     suspend fun fetchWeatherData(): List<CityWeatherData> {

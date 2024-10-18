@@ -23,7 +23,7 @@ object EnvLoader {
     }
 
     fun <T> get(key: String, transform: (String) -> T): T {
-        val value = envMap[key] ?: throw IllegalArgumentException("$key is missing")
+        val value = envMap[key] ?: System.getenv(key) ?: throw IllegalArgumentException("$key is missing")
         return transform(value)
     }
 }
