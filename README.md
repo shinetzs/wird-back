@@ -1,4 +1,4 @@
-WIRD-BACKEND
+WIRD-BACKEND 
 
 DESCRIPCIÓN
 
@@ -14,7 +14,7 @@ REQUISITOS PREVIOS
 -  Tomorrow.io account
 
 
-INSTALACIÓN Y EJECUCIÓN
+INSTALACIÓN Y EJECUCIÓN LOCAL
 
 - Clona este repositorio
 - Configura las variables de entorno:
@@ -25,6 +25,19 @@ INSTALACIÓN Y EJECUCIÓN
       REDIS_PASSWORD=your_redis_password
       TOMORROW_API_KEY=tomorrow_api_key
 - Realizar build del proyecto:
-   ./gradlew build
+   directamente desde el ide o ejecutando ./gradlew build
 - Correr proyecto
-   ./gradlew run
+   directamente desde el ide o ejecutando ./gradlew run
+
+
+INSTALACIÓN Y EJECUCIÓN PRODUCCIÓN RAILWAY DESDE GITHUB
+
+- Crear cuenta en Railway
+- Vincular proyecto de github (Deploy from github repo)
+- En la nueva pestaña abrir proyecto y en pestaña Variable ingresar variables de entorno
+      REDIS_HOST=your_redis_host
+      REDIS_PORT=your_redis_port
+      REDIS_PASSWORD=your_redis_password
+      TOMORROW_API_KEY=tomorrow_api_key
+- En pestaña Settings apartado Networking generar dominio (url)
+- Ejecutar deploy
