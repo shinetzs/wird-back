@@ -1,7 +1,6 @@
 package com.example.util
 
 import redis.clients.jedis.Jedis
-import java.io.File
 
 object RedisClient {
 
