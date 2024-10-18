@@ -1,6 +1,7 @@
 Wird-Backend
 
 Descripción
+
 Este proyecto es un servicio para la consulta y almacenamiento en caché de datos meteorológicos de varias ciudades. 
 Utiliza una API meteorológica externa (Tomorrow.io) para obtener los datos de clima y un caché basado en Redis.
 
