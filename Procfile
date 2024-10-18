@@ -1,1 +1,0 @@
-web: java -jar build/libs/wird-backend.jar
